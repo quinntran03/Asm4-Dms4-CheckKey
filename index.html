@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CheckKey is a simple password manager for storing, organizing and protecting your credentials.">
+  <meta name="google-site-verification" content="ADDHYhHLiQUN7ObdydELDXqCngln5m3XLajtGYqunVk" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>CHECK KEY - Password Manager</title>
+
+  <!-- Landing CSS + existing CHECK KEY CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  
+
+<style id="checkkey-vietnamese-typography-fix">
+/* =========================================================
+   CHECK KEY — VIETNAMESE LANDING TYPOGRAPHY FIX
+   Keep the dashboard hierarchy, but use a Vietnamese-safe
+   serif fallback for display headings to avoid broken glyph
+   spacing/fallback rendering.
+   ========================================================= */
+
+html[lang="vi"] #landing-shell .hero h1,
+html[lang="vi"] #landing-shell .section-heading h2,
+html[lang="vi"] #landing-shell .security h2,
+html[lang="vi"] #landing-shell .split-block h2,
+html[lang="vi"] #landing-shell .cta h2,
+html[lang="vi"] #landing-shell .statement-inner h2,
+html[lang="vi"] #landing-shell .feature-item h3,
+html[lang="vi"] #landing-shell .step-item h3,
+html[lang="vi"] #landing-shell .about-copy h2,
+html[lang="vi"] #landing-shell .about-value h3,
+html[lang="vi"] #landing-shell .security-readmore-intro h3,
+html[lang="vi"] #landing-shell .security-faq-intro h3 {
+  font-family: "Times New Roman", Georgia, serif !important;
+  font-kerning: normal;
+  font-variant-ligatures: normal;
+  word-spacing: normal;
+}
+
+/* Prevent compressed negative tracking from making Vietnamese
+   fallback glyphs look artificially separated. */
+html[lang="vi"] #landing-shell .feature-item h3,
+html[lang="vi"] #landing-shell .step-item h3 {
+  letter-spacing: -0.02em;
+}
+
+html[lang="vi"] #landing-shell .about-copy h2 {
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+html[lang="vi"] #landing-shell .statement-inner h2 {
+  letter-spacing: -0.025em;
+  line-height: 1.0;
+}
+</style>
+
+</head>
+<body>
+<!-- ============================================== -->
+  <!-- LANDING PAGE — MERGED INTO THE MAIN DOCUMENT -->
+  <!-- No iframe. Landing and CHECK KEY now share one document. -->
+  <!-- ============================================== -->
+  <div id="landing-shell" aria-label="CheckKey landing page" data-i18n-aria="CheckKey landing page">
+<div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="CheckKey home" data-i18n-aria="CheckKey home">
+      <img src="checkkey-logo.png" alt="CheckKey" />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation" data-i18n-aria="Primary navigation">
+      <a href="#features" data-i18n="Features">Features</a>
+      <a href="#security" data-i18n="Security">Security</a>
+      <a href="#steps" data-i18n="How it works">How it works</a>
+      <a href="#about" data-i18n="About">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="language-switcher" role="group" aria-label="Language selector" data-i18n-aria="Language selector">
+        <button class="lang-button active" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-button" type="button" data-lang="vi" aria-pressed="false">VI</button>
+      </div>
+      <a class="login-link" href="#" data-i18n="Log in">Log in</a>
+      <a class="button button-primary" href="#start">Sign up <span>↗</span></a>
+    </div>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu" data-i18n-aria="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-language-row">
+        <span class="mobile-language-label" data-i18n="Language">Language</span>
+        <div class="language-switcher" role="group" aria-label="Language selector" data-i18n-aria="Language selector">
+          <button class="lang-button active" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-button" type="button" data-lang="vi" aria-pressed="false">VI</button>
+        </div>
+      </div>
+      <a href="#features" data-i18n="Features">Features</a>
+      <a href="#security" data-i18n="Security">Security</a>
+      <a href="#steps" data-i18n="How it works">How it works</a>
+      <a href="#about" data-i18n="About">About</a>
+      <a href="#" data-i18n="Log in">Log in</a>
+      <a class="button button-primary" href="#start" data-i18n="Sign up">Sign up</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-width" id="start">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" data-i18n="CHECKKEY PASSWORD MANAGER">CHECKKEY PASSWORD MANAGER</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line hero-title-dark" data-i18n="Your Passwords.">Your Passwords.</span>
+          <span class="hero-title-line hero-title-accent hero-title-accent-first" data-i18n="Impossible To Hack.">Impossible To Hack.</span>
+        </h1>
+        <p class="hero-text" data-i18n="Save credentials, find accounts quickly and keep access under your control.">Save credentials, find accounts quickly and keep access under your control.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" id="hero-create-account" href="#" data-i18n="Create your account">Create your account <span>↗</span></a>
+        </div>
+        <div class="hero-note">
+          <span data-i18n="Encrypted vault">Encrypted vault</span>
+          <span data-i18n="Password history">Password history</span>
+          <span data-i18n="Automatic lock">Automatic lock</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" id="demo">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+
+        <div class="hero-demo">
+          <div class="demo-topbar">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <span class="demo-status" data-i18n="VAULT OPEN">VAULT OPEN</span>
+          </div>
+
+          <div class="demo-heading">
+            <div>
+              <p data-i18n="MY VAULT">MY VAULT</p>
+              <h2 data-i18n="Saved accounts">Saved accounts</h2>
+            </div>
+            <button class="add-button" id="addCredential" type="button" aria-label="Add a sample credential" data-i18n-aria="Add a sample credential">+</button>
+          </div>
+
+          <label class="search-box">
+            <span>⌕</span>
+            <input id="vaultSearch" type="search" placeholder="Search Google, Figma, PayPal..." data-i18n-placeholder="Search Google, Figma, PayPal..." />
+            <kbd>⌘ K</kbd>
+          </label>
+
+          <div class="category-tabs" aria-label="Credential filters" data-i18n-aria="Credential filters">
+            <button class="category-tab active" type="button" data-filter="all" data-i18n="All">All</button>
+            <button class="category-tab" type="button" data-filter="work" data-i18n="Work">Work</button>
+            <button class="category-tab" type="button" data-filter="social" data-i18n="Social">Social</button>
+            <button class="category-tab" type="button" data-filter="finance" data-i18n="Finance">Finance</button>
+          </div>
+
+          <div class="credential-list" id="vaultList">
+            <article class="credential-item" data-name="google" data-category="work">
+              <div class="service-mark service-google">G</div>
+              <div><strong>Google</strong><span>hello@example.com</span></div>
+              <button class="password-toggle" type="button" data-password="Ck!9mP#24">••••••••</button>
+            </article>
+            <article class="credential-item" data-name="instagram" data-category="social">
+              <div class="service-mark service-instagram">I</div>
+              <div><strong>Instagram</strong><span>phuong@example.com</span></div>
+              <button class="password-toggle" type="button" data-password="CheckKey26!">••••••••</button>
+            </article>
+            <article class="credential-item" data-name="figma" data-category="work">
+              <div class="service-mark service-figma">F</div>
+              <div><strong>Figma</strong><span>design@example.com</span></div>
+              <button class="password-toggle" type="button" data-password="F!gma_92CK">••••••••</button>
+            </article>
+            <article class="credential-item" data-name="paypal" data-category="finance">
+              <div class="service-mark service-paypal">P</div>
+              <div><strong>PayPal</strong><span>payment@example.com</span></div>
+              <button class="password-toggle" type="button" data-password="Pay#Vault77">••••••••</button>
+            </article>
+          </div>
+
+          <div class="demo-footer">
+            <span><i></i> Synced just now</span>
+            <span data-i18n="4 accounts">4 accounts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features page-width" id="features">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow" data-i18n="CORE FEATURES">CORE FEATURES</p>
+          <h2 data-i18n="Useful by default.">Useful by default.</h2>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-item reveal">
+          <div class="feature-item-top">
+            <span class="feature-line"></span>
+            <span class="feature-number">01</span>
+          </div>
+          <h3><span data-i18n="Create your account">Create your account</span></h3>
+          <div class="feature-mini feature-signup">
+            <div class="mini-window-dots"><i></i><i></i><i></i></div>
+            <div class="mini-input">you@email.com</div>
+            <div class="mini-input mini-password"><span class="dots">••••••••</span></div>
+          </div>
+        </article>
+
+        <article class="feature-item reveal">
+          <div class="feature-item-top">
+            <span class="feature-line"></span>
+            <span class="feature-number">02</span>
+          </div>
+          <h3><span data-i18n="Protect your vault">Protect your vault</span></h3>
+          <div class="feature-mini feature-protect">
+            <div class="protect-bg-1"></div>
+            <div class="protect-bg-2"></div>
+            <div class="mini-password-field">
+              <span class="dots">••••••••</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22"/></svg>
+            </div>
+            <div class="mini-lock-card">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              Master password
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-item reveal">
+          <div class="feature-item-top">
+            <span class="feature-line"></span>
+            <span class="feature-number">03</span>
+          </div>
+          <h3><span data-i18n="Passwords history">Passwords history</span></h3>
+          <div class="feature-mini feature-history">
+            <div class="history-line-bg"></div>
+            <div class="history-item">
+              <div class="history-dot"></div>
+              <div class="history-card"><span class="dots">••••••••</span><small>Dec 12, 2024</small></div>
+            </div>
+            <div class="history-item">
+              <div class="history-dot"></div>
+              <div class="history-card"><span class="dots">••••••••</span><small>Nov 3, 2024</small></div>
+            </div>
+            <div class="history-item">
+              <div class="history-dot"></div>
+              <div class="history-card"><span class="dots">••••••••</span><small>Aug 18, 2024</small></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-item reveal">
+          <div class="feature-item-top">
+            <span class="feature-line"></span>
+            <span class="feature-number">04</span>
+          </div>
+          <h3><span data-i18n="Emergency access">Emergency access</span></h3>
+          <div class="feature-mini feature-emergency">
+            <div class="mini-search">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span data-i18n="Search accounts...">Search accounts...</span>
+            </div>
+            <div class="mini-account">
+              <span class="account-icon github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </span>
+              <span class="account-name">GitHub</span>
+              <span class="arrow-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+            </div>
+            <div class="mini-account">
+              <span class="account-icon google">
+                <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.35 12.27c0-.77-.07-1.52-.22-2.23H12v4.22h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.7 2.91-4.2 2.91-7.38Z"/><path fill="#34A853" d="M12 21.5c2.63 0 4.84-.87 6.45-2.35l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.04H3.28v2.53A9.74 9.74 0 0 0 12 21.5Z"/><path fill="#FBBC05" d="M6.53 13.58A5.85 5.85 0 0 1 6.22 12c0-.55.11-1.09.31-1.58V7.89H3.28A9.5 9.5 0 0 0 2.25 12c0 1.48.35 2.87 1.03 4.11l3.25-2.53Z"/><path fill="#EA4335" d="M12 6.38c1.43 0 2.71.49 3.72 1.46l2.78-2.78C16.84 3.49 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.72 5.39l3.25 2.53C7.3 8.1 9.46 6.38 12 6.38Z"/></svg>
+              </span>
+              <span class="account-name">Google</span>
+              <span class="arrow-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="security" id="security">
+      <div class="page-width security-content">
+        <div class="security-intro reveal">
+          <p class="eyebrow eyebrow-light" data-i18n="SECURITY FIRST">SECURITY FIRST</p>
+          <h2 data-i18n="Your vault should protect itself.">Your vault should protect itself.</h2>
+          <p data-i18n="See how CheckKey keeps your master password and plain passwords separate from the encrypted data it stores.">See how CheckKey keeps your master password and plain passwords separate from the encrypted data it stores.</p>
+          <button class="security-readmore-button" id="securityReadMoreButton" type="button" aria-expanded="false" aria-controls="securityReadMore">
+            <span data-i18n="Read more about security">Read more about security</span>
+            <b aria-hidden="true">↘</b>
+          </button>
+        </div>
+
+        <figure class="security-diagram reveal">
+          <img src="security-diagram.png" alt="CheckKey security diagram showing only you know the master password, passwords are encrypted, and the front end and third-party data remain separate" />
+        </figure>
+
+        <div class="security-readmore" id="securityReadMore" hidden>
+          <div class="security-readmore-intro">
+            <p class="eyebrow eyebrow-light" data-i18n="READ MORE">READ MORE</p>
+            <h3><span data-i18n="How CheckKey">How CheckKey</span><br class="readmore-title-break"><span class="readmore-accent" data-i18n="protects your passwords.">protects your passwords.</span></h3>
+            <p><span data-i18n="Your passwords stay private and encrypted, so you stay in control">Your passwords stay private and encrypted, so you stay in control</span><br class="readmore-desktop-break"> <span data-i18n="wherever you go.">wherever you go.</span></p>
+          </div>
+
+          <div class="security-protection-grid">
+            <article class="security-protection-item">
+              <div class="security-protection-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="10" width="32" height="22" rx="2"></rect>
+                  <path d="M4 37h40"></path>
+                  <path d="M16 37l2-5h12l2 5"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 data-i18n="Encrypted on your device">Encrypted on your device</h4>
+                <p data-i18n="Your password is encrypted before it leaves your device.">Your password is encrypted before it leaves your device.</p>
+              </div>
+            </article>
+
+            <article class="security-protection-item">
+              <div class="security-protection-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="24" cy="12" rx="11" ry="5"></ellipse>
+                  <path d="M13 12v10c0 2.8 4.9 5 11 5s11-2.2 11-5V12"></path>
+                  <path d="M13 22v10c0 2.8 4.9 5 11 5s11-2.2 11-5V22"></path>
+                  <path d="M13 32v4c0 2.8 4.9 5 11 5s11-2.2 11-5v-4"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 data-i18n="Stored as encrypted data">Stored as encrypted data</h4>
+                <p data-i18n="CheckKey stores encrypted data, not readable passwords.">CheckKey stores encrypted data, not readable passwords.</p>
+              </div>
+            </article>
+
+            <article class="security-protection-item">
+              <div class="security-protection-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="13" y="21" width="22" height="18" rx="2"></rect>
+                  <path d="M18 21v-6a6 6 0 0 1 12 0v6"></path>
+                  <circle cx="24" cy="29" r="1.5"></circle>
+                  <path d="M24 31v4"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 data-i18n="Readable only when needed">Readable only when needed</h4>
+                <p data-i18n="Your password is decrypted only when you need it, on your trusted device.">Your password is decrypted only when you need it, on your trusted device.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="security-readmore-divider"></div>
+
+          <div class="security-faq">
+            <div class="security-faq-intro">
+              <p class="eyebrow eyebrow-light" data-i18n="FAQ">FAQ</p>
+              <h3><span data-i18n="Common questions.">Common questions.</span><br><span class="faq-accent" data-i18n="Clear answers.">Clear answers.</span></h3>
+              <p data-i18n="Everything you need to know, in plain language.">Everything you need to know, in plain language.</p>
+            </div>
+
+            <div class="security-faq-list">
+              <article class="security-faq-item">
+                <button type="button" class="security-faq-question" aria-expanded="false">
+                  <span data-i18n="Can CheckKey read my passwords?">Can CheckKey read my passwords?</span>
+                  <b aria-hidden="true">−</b>
+                </button>
+                <div class="security-faq-answer">
+                  <p data-i18n="No. Your passwords remain encrypted, and only you can unlock them.">No. Your passwords remain encrypted, and only you can unlock them.</p>
+                </div>
+              </article>
+
+              <article class="security-faq-item">
+                <button type="button" class="security-faq-question" aria-expanded="false">
+                  <span data-i18n="What if someone gets access to stored data?">What if someone gets access to stored data?</span>
+                  <b aria-hidden="true">−</b>
+                </button>
+                <div class="security-faq-answer">
+                  <p data-i18n="Without your key, the data stays encrypted and unreadable.">Without your key, the data stays encrypted and unreadable.</p>
+                </div>
+              </article>
+
+              <article class="security-faq-item">
+                <button type="button" class="security-faq-question" aria-expanded="false">
+                  <span data-i18n="What protects your master password?">What protects your master password?</span>
+                  <b aria-hidden="true">−</b>
+                </button>
+                <div class="security-faq-answer">
+                  <p data-i18n="Your master password stays with you and is not stored as readable text.">Your master password stays with you and is not stored as readable text.</p>
+                </div>
+              </article>
+
+              <article class="security-faq-item">
+                <button type="button" class="security-faq-question" aria-expanded="false">
+                  <span data-i18n="How do I control device access?">How do I control device access?</span>
+                  <b aria-hidden="true">−</b>
+                </button>
+                <div class="security-faq-answer">
+                  <p data-i18n="You can review connected devices and remove access you no longer trust.">You can review connected devices and remove access you no longer trust.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="about-section page-width" id="about">
+      <div class="about-shell reveal">
+        <div class="about-copy">
+          <p class="eyebrow" data-i18n="ABOUT CHECKKEY">ABOUT CHECKKEY</p>
+          <h2 data-i18n="A simpler way to keep your passwords under your control.">A simpler way to keep your passwords under your control.</h2>
+          <p class="about-lead" data-i18n="Secure, organised and always yours.">Secure, organised and always yours.</p>
+        </div>
+
+        <div class="about-values" aria-label="CheckKey values" data-i18n-aria="CheckKey values">
+          <article class="about-value">
+            <span>01</span>
+            <div>
+              <h3 data-i18n="Simple to use">Simple to use</h3>
+              <p data-i18n="Save, search and manage with ease.">Save, search and manage with ease.</p>
+            </div>
+          </article>
+
+          <article class="about-value">
+            <span>02</span>
+            <div>
+              <h3 data-i18n="Private by design">Private by design</h3>
+              <p data-i18n="Your data stays encrypted and separate.">Your data stays encrypted and separate.</p>
+            </div>
+          </article>
+
+          <article class="about-value">
+            <span>03</span>
+            <div>
+              <h3 data-i18n="Built for control">Built for control</h3>
+              <p data-i18n="Access anywhere, on your terms.">Access anywhere, on your terms.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+<section class="statement-strip">
+      <div class="page-width statement-inner reveal">
+        <p class="statement-kicker" data-i18n="DESIGNED FOR DAILY USE">DESIGNED FOR DAILY USE</p>
+        <h2><span data-i18n="Less clutter.">Less clutter.</span><br><em data-i18n="More control.">More control.</em></h2>
+        <p class="statement-copy" data-i18n="CheckKey keeps password management focused on the actions people actually need: save, search, protect and access.">CheckKey keeps password management focused on the actions people actually need: save, search, protect and access.</p>
+      </div>
+    </section>
+
+    <section class="steps page-width" id="steps">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow" data-i18n="HOW IT WORKS">HOW IT WORKS</p>
+          <h2 data-i18n="Start in three moves.">Start in three moves.</h2>
+        </div>
+      </div>
+
+      <div class="step-list">
+        <article class="step-item reveal">
+          <div class="step-marker">
+            <span class="step-number">01</span>
+            <span class="step-dot"></span>
+            <svg class="step-wave" preserveAspectRatio="none" viewBox="0 0 100 25"><path d="M0,0 C30,0 40,25 50,25 C60,25 70,0 100,0" vector-effect="non-scaling-stroke"></path></svg>
+          </div>
+          <h3 data-i18n="Create your account">Create your account</h3>
+          <p><span data-i18n="Sign up with your email and">Sign up with your email and</span><br class="step-desktop-break"> <span data-i18n="complete verification.">complete verification.</span></p>
+        </article>
+        
+        <article class="step-item reveal">
+          <div class="step-marker">
+            <span class="step-number">02</span>
+            <span class="step-dot"></span>
+            <svg class="step-wave" preserveAspectRatio="none" viewBox="0 0 100 25"><path d="M0,0 C30,0 40,25 50,25 C60,25 70,0 100,0" vector-effect="non-scaling-stroke"></path></svg>
+          </div>
+          <h3 data-i18n="Protect your vault">Protect your vault</h3>
+          <p><span data-i18n="Set your master password">Set your master password</span><br class="step-desktop-break"> <span data-i18n="and personal security question.">and personal security question.</span></p>
+        </article>
+        
+        <article class="step-item reveal">
+          <div class="step-marker">
+            <span class="step-number">03</span>
+            <span class="step-dot"></span>
+            <svg class="step-wave straight" preserveAspectRatio="none" viewBox="0 0 100 25"><line x1="0" y1="0" x2="100" y2="0" vector-effect="non-scaling-stroke"></line></svg>
+          </div>
+          <h3 data-i18n="Emergency Access">Emergency Access</h3>
+          <p><span data-i18n="Give a trusted person secure">Give a trusted person secure</span><br class="step-desktop-break"> <span data-i18n="access during an emergency.">access during an emergency.</span></p>
+        </article>
+      </div>
+    </section>
+
+
+
+    <section class="cta page-width reveal">
+      <div class="cta-content">
+        <p class="eyebrow eyebrow-light" data-i18n="CHECKKEY">CHECKKEY</p>
+        <h2>Giữ quyền truy cập đơn giản.<br>Luôn giữ quyền kiểm soát.</h2>
+      </div>
+      <div class="cta-mark" aria-hidden="true">CK</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="page-width footer-inner">
+      <div class="footer-brand">
+        <img src="checkkey-logo.png" alt="CheckKey" />
+        <p data-i18n="Your Passwords. Impossible To hack.">Your Passwords. Impossible To hack.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#features" data-i18n="Features">Features</a>
+        <a href="#security" data-i18n="Security">Security</a>
+        <a href="#steps" data-i18n="How it works">How it works</a>
+        <a href="#about" data-i18n="About">About</a>
+        </nav>
+      <p data-i18n="© 2026 CheckKey.">© 2026 CheckKey.</p>
+    </div>
+  </footer>
+
+  </div>
+
+
+
+  <!-- ============================================== -->
+  <!-- CHECK KEY APP -->
+  <!-- Hidden while the Landing page is active. -->
+  <!-- script.js controls navigation between Landing and CHECK KEY. -->
+  <!-- ============================================== -->
+  <div id="checkkey-app" style="display: none;">
+
+  <!-- Language Switcher -->
+  <div id="app-language-switcher" class="language-switcher" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99999; background: #ffffff; padding: 5px 10px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <select id="lang-select" onchange="window.switchLanguage(this.value)" style="border: none; background: transparent; cursor: pointer; font-size: 14px; outline: none; font-weight: bold; color: #333;">
+      <option value="en">EN</option>
+      <option value="vi">VI</option>
+    </select>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('app_lang') || 'en';
+      const select = document.getElementById('lang-select');
+      if (select) select.value = lang;
+    });
+  </script>
+
+  <!-- Screen 0: Startup Loading -->
+  <section id="screen-startup" class="screen active" role="status" aria-live="polite">
+    <div class="auth-wrapper">
+      <div class="auth-card text-center startup-card">
+        <div class="spinner"></div>
+        <h2 class="mt-3">CHECK KEY</h2>
+        <p class="text-muted mt-2" data-i18n="Checking your account...">Checking your account...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 1: Create Account -->
+  <section id="screen-create-account" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <h3 class="text-center" data-i18n="Create Account">Create Account</h3>
+        <form id="form-signup" novalidate>
+          <div class="form-group">
+            <label for="reg-email" data-i18n="Email">Email</label>
+            <input type="email" id="reg-email" required>
+            <span class="error-msg" id="err-reg-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-master-pwd" data-i18n="Master password">Master password</label>
+            <div class="password-field">
+              <input type="password" id="reg-master-pwd" autocomplete="new-password" required>
+              <button type="button" class="password-toggle" data-target="reg-master-pwd" aria-controls="reg-master-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+            <ul class="password-checklist" id="reg-pwd-checklist">
+              <li id="reg-req-length" data-i18n="At least 12 characters">At least 12 characters</li>
+              <li id="reg-req-lower" data-i18n="One lowercase letter">One lowercase letter</li>
+              <li id="reg-req-upper" data-i18n="One uppercase letter">One uppercase letter</li>
+              <li id="reg-req-number" data-i18n="One number">One number</li>
+              <li id="reg-req-special" data-i18n="One special character">One special character</li>
+            </ul>
+            <span class="error-msg" id="err-reg-master-pwd"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm-pwd" data-i18n="Confirm master password">Confirm master password</label>
+            <div class="password-field">
+              <input type="password" id="reg-confirm-pwd" autocomplete="new-password" required>
+              <button type="button" class="password-toggle" data-target="reg-confirm-pwd" aria-controls="reg-confirm-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+            <span class="error-msg" id="err-reg-confirm-pwd"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-sec-question" data-i18n="Security question">Security question</label>
+            <select id="reg-sec-question" required>
+              <option value="" data-i18n="Select a question">Select a question</option>
+              <option value="pet" data-i18n="What was the name of your first pet?">What was the name of your first pet?</option>
+              <option value="school" data-i18n="What was the name of your first school?">What was the name of your first school?</option>
+            </select>
+            <span class="error-msg" id="err-reg-sec-question"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-sec-answer" data-i18n="Answer">Answer</label>
+            <input type="text" id="reg-sec-answer" autocomplete="off" required>
+            <span class="error-msg" id="err-reg-sec-answer"></span>
+          </div>
+          
+          <button type="submit" class="btn-primary mt-3" disabled data-i18n="Create account">Create account</button>
+        </form>
+        <p class="text-center mt-3">
+          <span data-i18n="Already have an account? ">Already have an account? </span><a href="#" id="link-to-login" data-i18n="Log in">Log in</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen: Recovery Setup PIN (Compact Dialog Style) -->
+  <section id="screen-recovery-setup" class="screen">
+    <div class="auth-wrapper">
+      <div class="auth-card text-center" style="max-width: 400px; padding: 40px 30px;">
+        <div class="icon-placeholder" style="font-size: 32px; border: none; margin-bottom: 10px; line-height: 1;">🛡️</div>
+        <h3 data-i18n="Set Up Recovery PIN">Set Up Recovery PIN</h3>
+        <p class="text-muted mt-2" data-i18n="Create a 6-digit PIN to use if you forget your Master Password.">Create a 6-digit PIN to use if you forget your Master Password.</p>
+        
+        <div class="warning-box mt-3 text-left">
+          <span class="warning-icon" aria-hidden="true">⚠️</span>
+          <div class="warning-content">
+            <p data-i18n="Keep this PIN in a safe place. You will need it if you forget your Master Password.">Keep this PIN in a safe place. You will need it if you forget your Master Password.</p>
+          </div>
+        </div>
+
+        <span class="error-msg text-center d-block mt-3" id="recovery-setup-error" aria-live="polite"></span>
+
+        <form id="form-recovery-setup" novalidate class="mt-3 text-left">
+          <div class="form-group">
+            <label for="setup-recovery-pin" data-i18n="Recovery PIN">Recovery PIN</label>
+            <div class="password-field">
+              <input type="password" id="setup-recovery-pin" inputmode="numeric" maxlength="6" minlength="6" autocomplete="new-password" required style="letter-spacing: 4px; font-family: monospace; font-size: 18px;">
+              <button type="button" class="password-toggle" data-target="setup-recovery-pin" aria-controls="setup-recovery-pin" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="setup-confirm-recovery-pin" data-i18n="Confirm Recovery PIN">Confirm Recovery PIN</label>
+            <div class="password-field">
+              <input type="password" id="setup-confirm-recovery-pin" inputmode="numeric" maxlength="6" minlength="6" autocomplete="new-password" required style="letter-spacing: 4px; font-family: monospace; font-size: 18px;">
+              <button type="button" class="password-toggle" data-target="setup-confirm-recovery-pin" aria-controls="setup-confirm-recovery-pin" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary mt-4" id="btn-save-recovery-pin" data-i18n="Save & Continue">Save & Continue</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 2: Check Your Email -->
+  <section id="screen-check-email" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card text-center">
+        <div class="icon-placeholder">✉️</div>
+        <p data-i18n="We sent you a confirmation link.">We sent you a confirmation link.</p>
+        
+        <div class="warning-box mt-3">
+          <span class="warning-icon" aria-hidden="true">⚠️</span>
+          <div class="warning-content">
+            <h4 data-i18n="Can't find the email?">Can't find the email?</h4>
+            <p data-i18n="Check your Spam/Junk folder. If you find it there, mark it as &quot;Not Spam&quot; so future emails from Check Key can reach your inbox.">Check your Spam/Junk folder. If you find it there, mark it as "Not Spam" so future emails from Check Key can reach your inbox.</p>
+          </div>
+        </div>
+
+        <button type="button" class="btn-primary mt-3" id="btn-back-to-login" data-i18n="Back to log in">Back to log in</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 3: Log In -->
+  <section id="screen-login" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <h3 class="text-center" data-i18n="Log In">Log In</h3>
+        <form id="form-login" novalidate>
+          <div class="form-group">
+            <label for="login-email" data-i18n="Email">Email</label>
+            <input type="email" id="login-email" required>
+            <span class="error-msg" id="err-login-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="login-master-pwd" data-i18n="Master password">Master password</label>
+            <div class="password-field">
+              <input type="password" id="login-master-pwd" autocomplete="current-password" required>
+              <button type="button" class="password-toggle" data-target="login-master-pwd" aria-controls="login-master-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+            <span class="error-msg" id="err-login-master-pwd"></span>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="login-remember">
+            <label for="login-remember" data-i18n="Remember me">Remember me</label>
+          </div>
+          <button type="submit" class="btn-primary" data-i18n="Log in">Log in</button>
+        </form>
+        <p class="text-center mt-3">
+          <a href="#" id="forgot-master-password" data-i18n="Forgot Master Password?">Forgot Master Password?</a><br><br>
+          <a href="#" id="link-to-signup" data-i18n="Create an account">Create an account</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen: Account Status Error -->
+  <section id="screen-account-error" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card text-center">
+        <div class="icon-placeholder" style="border-color: var(--error-color); color: var(--error-color);">⚠️</div>
+        <h3 class="mt-3 text-danger" data-i18n="Connection Error">Connection Error</h3>
+        <p class="mt-3 text-muted" data-i18n="Unable to verify account status. Please try again.">Unable to verify account status. Please try again.</p>
+        <button type="button" class="btn-primary mt-3" id="btn-retry-account-status" data-i18n="Try Again">Try Again</button>
+        <button type="button" class="btn-secondary mt-3" id="btn-error-logout" data-i18n="Log Out">Log Out</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen: Vault Locked -->
+  <section id="screen-vault-locked" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <h3 class="text-center" data-i18n="Vault Locked">Vault Locked</h3>
+        <p class="text-center text-muted mb-3" data-i18n="Please enter your master password to unlock your vault.">Please enter your master password to unlock your vault.</p>
+        <form id="form-vault-unlock" novalidate>
+          <div class="form-group">
+            <label for="vault-unlock-pwd" data-i18n="Master password">Master password</label>
+            <div class="password-field">
+              <input type="password" id="vault-unlock-pwd" autocomplete="current-password" required>
+              <button type="button" class="password-toggle" data-target="vault-unlock-pwd" aria-controls="vault-unlock-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+            <span class="error-msg" id="err-vault-unlock-pwd"></span>
+          </div>
+          <button type="submit" class="btn-primary mt-3" data-i18n="Unlock Vault">Unlock Vault</button>
+        </form>
+        <div class="text-center mt-3">
+           <button type="button" class="btn-secondary btn-auto" id="btn-vault-logout" data-i18n="Log out">Log out</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen: Pending Deletion -->
+  <section id="screen-pending-deletion" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card text-center">
+        <div class="icon-placeholder" style="border-color: var(--error-color); color: var(--error-color);">⚠️</div>
+        <h3 class="mt-3 text-danger" data-i18n="Account Scheduled for Deletion">Account Scheduled for Deletion</h3>
+        <p class="mt-3" data-i18n="Your account and encrypted vault are scheduled for permanent deletion.">Your account and encrypted vault are scheduled for permanent deletion.</p>
+        
+        <div id="pending-deletion-active-area">
+          <p class="mt-2 font-weight-bold" data-i18n="You can cancel this request before:">You can cancel this request before:</p>
+          <p id="pending-deletion-date" class="mb-3 text-muted"></p>
+          <button type="button" class="btn-primary mt-3" id="btn-cancel-deletion" data-i18n="Cancel Account Deletion">Cancel Account Deletion</button>
+        </div>
+        
+        <div id="pending-deletion-expired-area" class="hidden">
+          <p class="mt-2 text-muted" data-i18n="The cancellation period has ended. Your account is awaiting permanent deletion.">The cancellation period has ended. Your account is awaiting permanent deletion.</p>
+        </div>
+
+        <button type="button" class="btn-secondary mt-3" id="btn-pending-logout" data-i18n="Log Out">Log Out</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen: Forgot Password / Recover Vault -->
+  <section id="screen-forgot-password" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card" style="max-width: 400px;">
+        <div class="text-center mb-3">
+          <div class="icon-placeholder" style="font-size: 32px; border: none; margin-bottom: 10px; line-height: 1;">🔐</div>
+          <h3 data-i18n="Forgot Master Password?">Forgot Master Password?</h3>
+          <p class="text-muted mt-2" data-i18n="Use your Recovery PIN to create a new Master Password.">Use your Recovery PIN to create a new Master Password.</p>
+        </div>
+        
+        <div id="recovery-loading" class="hidden text-center text-muted mb-3" data-i18n="Loading...">Loading...</div>
+        <div id="recovery-error" class="error-msg text-center mb-3 hidden" aria-live="polite"></div>
+
+        <form id="form-forgot-password" novalidate>
+          <div class="form-group">
+            <label for="recovery-email" data-i18n="Email">Email</label>
+            <input type="email" id="recovery-email" required>
+          </div>
+          <div class="form-group mt-3">
+            <label for="recovery-pin" data-i18n="Recovery PIN">Recovery PIN</label>
+            <div class="password-field">
+              <input type="password" id="recovery-pin" inputmode="numeric" maxlength="6" minlength="6" autocomplete="off" required style="letter-spacing: 4px; font-family: monospace; font-size: 18px;">
+              <button type="button" class="password-toggle" data-target="recovery-pin" aria-controls="recovery-pin" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary mt-4" data-i18n="Continue">Continue</button>
+        </form>
+        <p class="text-center mt-3">
+          <a href="#" id="link-back-to-login" data-i18n="Back to Login">Back to Login</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen: Recovery Set Password -->
+  <section id="screen-recovery-set-password" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <h3 class="text-center" data-i18n="Create a New Master Password">Create a New Master Password</h3>
+        <p class="text-center text-muted mb-3" data-i18n="Create a new Master Password to regain access to your account.">Create a new Master Password to regain access to your account.</p>
+        
+        <span class="error-msg text-center d-block mb-3" id="recovery-password-error" aria-live="polite"></span>
+
+        <form id="form-recovery-set-pwd" novalidate>
+          <div class="form-group mt-3">
+            <label for="recovery-new-password" data-i18n="New Master Password">New Master Password</label>
+            <div class="password-field">
+              <input type="password" id="recovery-new-password" autocomplete="new-password" required>
+              <button type="button" class="password-toggle" data-target="recovery-new-password" aria-controls="recovery-new-password" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+            <ul class="password-checklist" id="rec-new-pwd-checklist">
+              <li id="rec-new-req-length" data-i18n="At least 12 characters">At least 12 characters</li>
+              <li id="rec-new-req-lower" data-i18n="One lowercase letter">One lowercase letter</li>
+              <li id="rec-new-req-upper" data-i18n="One uppercase letter">One uppercase letter</li>
+              <li id="rec-new-req-number" data-i18n="One number">One number</li>
+              <li id="rec-new-req-special" data-i18n="One special character">One special character</li>
+            </ul>
+          </div>
+          <div class="form-group mt-3">
+            <label for="recovery-confirm-password" data-i18n="Confirm New Master Password">Confirm New Master Password</label>
+            <div class="password-field">
+              <input type="password" id="recovery-confirm-password" autocomplete="new-password" required>
+              <button type="button" class="password-toggle" data-target="recovery-confirm-password" aria-controls="recovery-confirm-password" aria-pressed="false" data-i18n="Show">Show</button>
+            </div>
+          </div>
+          
+          <button type="submit" id="recovery-set-password" class="btn-primary mt-4" disabled data-i18n="Set New Master Password">Set New Master Password</button>
+        </form>
+        <p class="text-center mt-3">
+          <a href="#" id="link-cancel-recovery" data-i18n="Cancel">Cancel</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen: Recovery Success -->
+  <section id="screen-recovery-success" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    <div class="auth-wrapper">
+      <div class="auth-card text-center">
+        <div class="icon-placeholder">✓</div>
+        <h3 class="mt-3" data-i18n="Master Password Updated">Master Password Updated</h3>
+        <p class="mt-2 text-muted" data-i18n="Your Master Password has been updated successfully.">Your Master Password has been updated successfully.</p>
+        <button type="button" class="btn-primary mt-3" id="btn-recovery-success-login" data-i18n="Back to Login">Back to Login</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="screen-dashboard" class="screen">
+    <header class="app-header">
+      <h2>CHECK KEY <span class="subtitle" data-i18n="Password Manager">Password Manager</span></h2>
+      <button type="button" class="btn-secondary btn-auto btn-back-to-landing" data-i18n="Home" style="float: right;">Home</button>
+    </header>
+    
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="#" class="nav-item active" id="nav-dashboard" data-i18n="Dashboard">Dashboard</a></li>
+            <li><a href="#" class="nav-item" id="nav-credentials" data-i18n="My Credentials">My Credentials</a></li>
+            <li><a href="#" class="nav-item" id="nav-folders" data-i18n="Folders">Folder</a></li>
+            <li><a href="#" class="nav-item" id="nav-search" data-i18n="Search & History">Search & History</a></li>
+            <li><a href="#" class="nav-item" id="nav-inheritance" data-i18n="Emergency Access">Emergency Access</a></li>
+            <li><a href="#" class="nav-item" id="nav-security" data-i18n="Security Settings">Security Settings</a></li>
+            <li><a href="#" class="nav-item" id="nav-devices" data-i18n="Devices & Access">Devices & Access</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="btn-logout" id="btn-logout" data-i18n="Log Out">Log Out</button>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="dashboard-content">
+        
+        <!-- CORE 2+3: Dashboard View -->
+        <div id="view-dashboard" class="dashboard-view view-wide active">
+          <div class="view-card mb-3">
+            <div class="flex-between">
+              <div>
+                <h3 data-i18n="Dashboard">Dashboard</h3>
+                <p class="text-muted" data-i18n="Select an option to manage your credentials.">Select an option to manage your credentials.</p>
+              </div>
+              <button type="button" class="btn-primary btn-auto" id="dashboard-btn-add-credential" data-i18n="Add Credential">Add Credential</button>
+            </div>
+            <div class="dashboard-actions mt-3">
+              <button class="dashboard-action-card" id="dashboard-btn-view-credentials">
+                <div class="action-text">
+                  <strong data-i18n="My Credentials">My Credentials</strong>
+                  <small data-i18n="View, add, edit or delete credentials">View, add, edit or delete credentials</small>
+                </div>
+              </button>
+              <button class="dashboard-action-card" id="dashboard-btn-search">
+                <div class="action-text">
+                  <strong data-i18n="Search & History">Search & History</strong>
+                  <small data-i18n="Search accounts and view password history">Search accounts and view password history</small>
+                </div>
+              </button>
+              <button class="dashboard-action-card" id="dashboard-btn-security">
+                <div class="action-text">
+                  <strong data-i18n="Security Settings">Security Settings</strong>
+                  <small data-i18n="Review password display settings">Review password display settings</small>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="flex-between">
+              <h3 data-i18n="Recent Credentials">Recent Credentials</h3>
+              <a href="#" id="dashboard-btn-view-all" data-i18n="View all">View all</a>
+            </div>
+            <div id="dashboard-recent-list" class="recent-list mt-3"></div>
+          </div>
+        </div>
+
+        <!-- CORE 2: List View -->
+        <div id="view-core2-list" class="dashboard-view view-wide">
+          <div class="view-card">
+            <div class="flex-between align-center">
+              <div>
+                <h3 class="mb-0" data-i18n="My Credentials">My Credentials</h3>
+                <span class="count-badge" id="core2-credential-count" data-i18n="0 credentials">0 credentials</span>
+              </div>
+              <div class="flex-end gap-10 actions-wrapper">
+                <select id="core2-select-sort" class="filter-select" aria-label="Sort credentials">
+                  <option value="updated-desc" selected data-i18n="Recently updated">Recently updated</option>
+                  <option value="updated-asc" data-i18n="Oldest updated">Oldest updated</option>
+                  <option value="name-asc" data-i18n="Name A–Z">Name A–Z</option>
+                  <option value="name-desc" data-i18n="Name Z–A">Name Z–A</option>
+                </select>
+                <select id="core2-select-folder-filter" class="filter-select" aria-label="Filter by folder">
+                  <option value="all" data-i18n="All Folders">All Folders</option>
+                  <option value="" data-i18n="Unfiled">Unfiled</option>
+                </select>
+                <select id="core2-select-status" class="filter-select" aria-label="Filter by status">
+                  <option value="active" selected data-i18n="Active">Active</option>
+                  <option value="archived" data-i18n="Archived">Archived</option>
+                  <option value="all" data-i18n="All">All</option>
+                </select>
+                <button class="btn-secondary btn-auto" id="core2-btn-create-folder" data-i18n="New Folder">New Folder</button>
+                <button class="btn-primary btn-auto" id="core2-btn-add" data-i18n="Add Credential">Add Credential</button>
+              </div>
+            </div>
+            <div class="table-wrap mt-3">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="Platform">Platform</th>
+                    <th data-i18n="Username or email">Username or email</th>
+                    <th data-i18n="Category">Category</th>
+                    <th class="text-right" data-i18n="Action">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="core2-credentials-body"></tbody>
+              </table>
+            </div>
+            <div class="empty-state hidden" id="core2-empty-state">
+              <h4 data-i18n="No credentials here">No credentials here</h4>
+              <p data-i18n="Adjust your filters or add a new credential to begin.">Adjust your filters or add a new credential to begin.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CORE 2: Add/Edit Form View -->
+        <div id="view-core2-form" class="dashboard-view view-wide">
+          <a href="#" class="back-link" id="core2-btn-back-from-form" data-i18n="← Back to My Credentials">← Back to My Credentials</a>
+          <div class="view-card mt-3 form-panel">
+            <h3 id="core2-form-heading" data-i18n="Add Credential">Add Credential</h3>
+            <form id="core2-credential-form" class="mt-3" novalidate>
+              <input type="hidden" id="core2-input-id">
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="core2-input-platform" data-i18n="Platform name">Platform name</label>
+                  <input type="text" id="core2-input-platform" data-i18n-placeholder="e.g. Gmail" required>
+                  <span class="error-msg" id="core2-error-platform"></span>
+                </div>
+                <div class="form-group">
+                  <label for="core2-input-category" data-i18n="Category">Category</label>
+                  <select id="core2-input-category" required>
+                    <option data-i18n="Education">Education</option>
+                    <option data-i18n="Social">Social</option>
+                    <option data-i18n="Work">Work</option>
+                    <option data-i18n="Finance">Finance</option>
+                    <option data-i18n="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group field-wide">
+                  <label for="core2-input-folder" data-i18n="Folder">Folder</label>
+                  <select id="core2-input-folder">
+                    <option value="" data-i18n="Unfiled">Unfiled</option>
+                  </select>
+                </div>
+                <div class="form-group field-wide hidden" id="core2-custom-category-wrapper">
+                  <label for="core2-input-custom-category" data-i18n="Custom Category">Custom Category</label>
+                  <input type="text" id="core2-input-custom-category" data-i18n-placeholder="Type your category name">
+                  <span class="error-msg text-muted mt-1" id="core2-custom-category-hint" data-i18n="This category will be grouped under Other in Search & History.">This category will be grouped under Other in Search & History.</span>
+                  <span class="error-msg" id="core2-error-custom-category"></span>
+                </div>
+                <div class="form-group field-wide">
+                  <label for="core2-input-website" data-i18n="Website (Optional)">Website (Optional)</label>
+                  <input type="text" id="core2-input-website" data-i18n-placeholder="example.com">
+                </div>
+                <div class="form-group field-wide">
+                  <label for="core2-input-username" data-i18n="Username or email">Username or email</label>
+                  <input type="text" id="core2-input-username" autocomplete="off" data-i18n-placeholder="user@example.com" required>
+                  <span class="error-msg" id="core2-error-username"></span>
+                </div>
+                <div class="form-group field-wide">
+                  <label for="core2-input-password" data-i18n="Password">Password</label>
+                  <div class="password-field">
+                    <input type="password" id="core2-input-password" autocomplete="off" data-i18n-placeholder="Use demo text only" required>
+                    <button type="button" class="password-toggle" id="core2-btn-toggle-form-password" data-target="core2-input-password" aria-controls="core2-input-password" aria-pressed="false" data-i18n="Show">Show</button>
+                  </div>
+                  <span class="error-msg text-muted mt-1" data-i18n="Do not enter a real password. The prototype never persists this value.">Do not enter a real password. The prototype never persists this value.</span>
+                  <span class="error-msg" id="core2-error-password"></span>
+                </div>
+                <div class="form-group field-wide">
+                  <label for="core2-input-notes" data-i18n="Notes">Notes</label>
+                  <textarea id="core2-input-notes" class="textarea-input" rows="4" data-i18n-placeholder="Optional notes"></textarea>
+                </div>
+              </div>
+              <div class="flex-end gap-10 mt-3">
+                <button type="button" class="btn-secondary btn-auto" id="core2-btn-cancel-form" data-i18n="Cancel">Cancel</button>
+                <button type="submit" class="btn-primary btn-auto" id="core2-btn-save" data-i18n="Save credential">Save credential</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- CORE 2: Detail View -->
+        <div id="view-core2-detail" class="dashboard-view view-wide">
+          <a href="#" class="back-link" id="core2-btn-back-from-detail" data-i18n="← Back to My Credentials">← Back to My Credentials</a>
+          <div class="view-card mt-3 detail-panel">
+            <div class="detail-header flex-start">
+              <div>
+                <h3 class="mb-0" id="core2-detail-platform">Platform</h3>
+                <p class="text-muted" data-i18n="Credential Details">Credential Details</p>
+              </div>
+            </div>
+            <dl class="detail-list mt-3">
+              <div class="detail-row">
+                <dt data-i18n="Website">Website</dt>
+                <dd id="core2-detail-website-container"></dd>
+              </div>
+              <div class="detail-row">
+                <dt data-i18n="Username or email">Username or email</dt>
+                <dd id="core2-detail-username"></dd>
+              </div>
+              <div class="detail-row">
+                <dt data-i18n="Password">Password</dt>
+                <dd class="flex-start gap-10">
+                  <span class="password-output" id="core2-detail-password" data-visible="false">••••••••••</span>
+                  <a href="#" id="core2-btn-show" aria-pressed="false" role="button" data-i18n="Show">Show</a>
+                  <a href="#" id="core2-btn-copy" role="button" data-i18n="Copy">Copy</a>
+                </dd>
+              </div>
+              <div class="detail-row">
+                <dt data-i18n="Category">Category</dt>
+                <dd id="core2-detail-category"></dd>
+              </div>
+              <div class="detail-row">
+                <dt data-i18n="Notes">Notes</dt>
+                <dd id="core2-detail-notes"></dd>
+              </div>
+              <div class="detail-row border-none">
+                <dt data-i18n="Last updated">Last updated</dt>
+                <dd id="core2-detail-updated" class="text-muted"></dd>
+              </div>
+            </dl>
+            <div class="flex-end gap-10 mt-3">
+              <button class="btn-secondary btn-auto" id="core2-btn-archive" data-i18n="Archive">Archive</button>
+              <button class="btn-secondary btn-auto hidden" id="core2-btn-restore" data-i18n="Restore">Restore</button>
+              <button class="btn-secondary btn-auto" id="core2-btn-edit" data-i18n="Edit">Edit</button>
+              <button class="btn-danger btn-auto" id="core2-btn-delete" data-i18n="Delete">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CORE 3: Search & History View -->
+        <div id="view-core3-search" class="dashboard-view view-wide">
+          <div class="view-card">
+            <h3 data-i18n="Search & History">Search & History</h3>
+            <form id="core3-search-form" class="mt-3">
+              <div class="form-group">
+                <input type="search" id="core3-input-search" data-i18n-placeholder="Search by platform, username, website or notes">
+              </div>
+              <div class="filter-row">
+                <select id="core3-select-sort" class="filter-select" aria-label="Sort credentials">
+                  <option value="updated-desc" selected data-i18n="Recently updated">Recently updated</option>
+                  <option value="updated-asc" data-i18n="Oldest updated">Oldest updated</option>
+                  <option value="name-asc" data-i18n="Name A–Z">Name A–Z</option>
+                  <option value="name-desc" data-i18n="Name Z–A">Name Z–A</option>
+                </select>
+                <select id="core3-select-status" class="filter-select" aria-label="Filter by status">
+                  <option value="active" selected data-i18n="Active">Active</option>
+                  <option value="archived" data-i18n="Archived">Archived</option>
+                  <option value="all" data-i18n="All">All</option>
+                </select>
+                <select id="core3-select-platform" class="filter-select" aria-label="Filter by platform">
+                  <option value="all" data-i18n="Platform">Platform</option>
+                </select>
+                <select id="core3-select-category" class="filter-select" aria-label="Filter by category">
+                  <option value="all" data-i18n="Category">Category</option>
+                </select>
+                <button type="submit" class="btn-secondary btn-auto" id="core3-btn-apply-filters" data-i18n="Apply">Apply</button>
+                <button type="button" class="btn-secondary btn-auto" id="core3-btn-reset-filters" data-i18n="Clear">Clear</button>
+              </div>
+            </form>
+            <div class="table-wrap mt-3" id="core3-results-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="Platform">Platform</th>
+                    <th data-i18n="Username or email">Username or email</th>
+                    <th data-i18n="Category">Category</th>
+                    <th class="text-right" data-i18n="Action">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="core3-results-list"></tbody>
+              </table>
+              <div class="table-footer text-center mt-3">
+                <p id="core3-results-count" class="text-muted" data-i18n="0 results found">0 results found</p>
+              </div>
+            </div>
+            <div class="empty-state hidden" id="core3-empty-state">
+              <h4 data-i18n="No matching credentials found.">No matching credentials found.</h4>
+            </div>
+            <h3 class="visually-hidden" id="core3-results-heading" data-i18n="All credentials">All credentials</h3>
+          </div>
+        </div>
+
+        <!-- CORE 3: Selected Credential Detail -->
+        <div id="view-core3-detail" class="dashboard-view view-wide">
+          <a href="#" class="back-link" id="core3-btn-back-from-detail" data-i18n="← Back to Search">← Back to Search</a>
+          <div class="view-card mt-3 detail-panel">
+            <h3 class="text-center" id="core3-selected-platform">Gmail</h3>
+            <dl class="detail-list mt-3">
+              <div class="detail-row">
+                <dt data-i18n="Platform:">Platform:</dt>
+                <dd id="core3-selected-platform-value">Gmail</dd>
+              </div>
+              <div class="detail-row">
+                <dt data-i18n="Website:">Website:</dt>
+                <dd id="core3-detail-website-container"></dd>
+              </div>
+              <div class="detail-row">
+                <dt data-i18n="Username or email:">Username or email:</dt>
+                <dd id="core3-selected-username">user@example.com</dd>
+              </div>
+              <div class="detail-row">
+                <dt data-i18n="Current password:">Current password:</dt>
+                <dd class="flex-start gap-10">
+                  <span class="password-output" id="core3-selected-password" data-visible="false">••••••••••</span>
+                  <a href="#" id="core3-btn-show-selected" aria-pressed="false" role="button" data-i18n="Show">Show</a>
+                  <a href="#" id="core3-btn-copy-selected" role="button" data-i18n="Copy">Copy</a>
+                </dd>
+              </div>
+              <div class="detail-row border-none">
+                <dt data-i18n="Last updated:">Last updated:</dt>
+                <dd id="core3-selected-updated" class="text-muted"></dd>
+              </div>
+            </dl>
+            <div class="text-center mt-3">
+              <button class="btn-secondary btn-auto" id="core3-btn-view-history" data-i18n="View password history">View password history</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CORE 3: Password History -->
+        <div id="view-core3-history" class="dashboard-view view-wide">
+          <a href="#" class="back-link" id="core3-btn-back-to-credential" data-i18n="← Back to credential">← Back to credential</a>
+          <div class="view-card mt-3 detail-panel">
+            <h3 class="text-center" id="core3-history-platform">Gmail</h3>
+            <div class="history-current-row mt-3 flex-between align-center border-bottom pb-3">
+              <div>
+                <p class="font-weight-bold mb-1" data-i18n="Current password">Current password</p>
+                <span class="password-output" id="core3-current-password" data-visible="false">••••••••••</span>
+              </div>
+              <span class="text-muted" id="core3-current-date"></span>
+              <a href="#" id="core3-btn-show-current" aria-pressed="false" role="button" data-i18n="Show">Show</a>
+            </div>
+            <div class="mt-3">
+              <p class="font-weight-bold" data-i18n="Previous passwords">Previous passwords</p>
+              <div id="core3-history-list" class="history-list mt-2"></div>
+            </div>
+            <p class="text-center text-muted mt-3" data-i18n="Passwords are hidden by default.">Passwords are hidden by default.</p>
+          </div>
+        </div>
+
+        <!-- EMERGENCY ACCESS VIEW -->
+        <div id="view-emergency-access" class="dashboard-view view-wide">
+          <div class="view-card mb-3">
+            <h3 data-i18n="Emergency Access">Emergency Access</h3>
+            <p class="text-muted" data-i18n="Designate someone to inherit your vault.">Designate someone to inherit your vault.</p>
+            <div id="emergency-access-owner-area" class="mt-3"></div>
+          </div>
+          
+          <div class="view-card mt-3 hidden" id="emergency-access-inheritor-pending-card">
+            <h3 data-i18n="Pending Invitations">Pending Invitations</h3>
+            <div id="emergency-access-inheritor-pending-list" class="mt-3"></div>
+          </div>
+          
+          <div class="view-card mt-3 hidden" id="emergency-access-inheritor-active-card">
+            <h3 data-i18n="Inherited Vaults">Inherited Vaults</h3>
+            <div id="emergency-access-inheritor-active-list" class="mt-3"></div>
+          </div>
+        </div>
+
+        <!-- DEVICES & ACCESS VIEW -->
+        <div id="view-devices-access" class="dashboard-view view-wide">
+          <div class="view-card mb-3">
+            <div class="flex-between align-center">
+              <div>
+                <h3 data-i18n="Devices & Access">Devices & Access</h3>
+                <p class="text-muted" data-i18n="Manage the devices that can access your CheckKey vault.">Manage the devices that can access your CheckKey vault.</p>
+              </div>
+            </div>
+
+            <div class="devices-section mt-3">
+              <h4 data-i18n="Current Device">Current Device</h4>
+              <div class="device-card device-card-current" id="current-device-card">
+                <div class="device-info">
+                  <div class="device-icon" aria-hidden="true">⌘</div>
+                  <div>
+                    <strong id="current-device-name" data-i18n="This device">This device</strong>
+                    <span id="current-device-details" class="device-meta">Loading...</span>
+                    <span id="current-device-ip" class="device-meta">IP: —</span>
+                  </div>
+                </div>
+                <span class="device-status" data-i18n="Current">Current</span>
+              </div>
+            </div>
+
+            <div class="devices-section mt-3">
+              <div class="flex-between align-center">
+                <h4 data-i18n="Other Devices">Other Devices</h4>
+                <button type="button" class="btn-secondary btn-auto" id="btn-sign-out-all-devices" data-i18n="Sign out all other devices">Sign out all other devices</button>
+              </div>
+
+              <div id="devices-list" class="devices-list mt-3">
+                <div class="device-empty-state" id="devices-empty-state">
+                  <p class="text-muted" data-i18n="No other devices are currently connected.">No other devices are currently connected.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="devices-security-note mt-3">
+              <strong data-i18n="Access control">Access control</strong>
+              <p class="text-muted" data-i18n="Review your active devices and revoke access from devices you no longer use.">Review your active devices and revoke access from devices you no longer use.</p>
+            </div>
+
+            <div class="devices-security-warning mt-3" role="note">
+              <span class="devices-security-warning-icon" aria-hidden="true">⚠️</span>
+              <div class="devices-security-warning-content">
+                <strong data-i18n="Device access warning">Device access warning</strong>
+                <p data-i18n="If a device is revoked, you will no longer be able to log in to your account from that device.">If a device is revoked, you will no longer be able to log in to your account from that device.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CORE 1: Security Settings -->
+        <div id="view-change-pwd" class="dashboard-view" style="margin: auto;">
+          <div class="view-card text-center mb-3">
+            <h3 data-i18n="Change Master Password">Change Master Password</h3>
+            <form id="form-change-pwd" novalidate>
+              <div class="form-group text-left">
+                <label for="current-master-pwd" data-i18n="Current master password">Current master password</label>
+                <div class="password-field">
+                  <input type="password" id="current-master-pwd" autocomplete="current-password" required>
+                  <button type="button" class="password-toggle" data-target="current-master-pwd" aria-controls="current-master-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+                </div>
+                <span class="error-msg" id="err-current-pwd"></span>
+              </div>
+              <button type="submit" class="btn-primary mt-3" data-i18n="Continue">Continue</button>
+            </form>
+          </div>
+
+          <div class="view-card text-center border-danger">
+            <h3 class="text-danger" data-i18n="Delete Account">Delete Account</h3>
+            <p class="text-muted mb-3" data-i18n="Permanently delete your account and all encrypted vault data.">Permanently delete your account and all encrypted vault data.</p>
+            <button type="button" class="btn-danger" id="btn-initiate-deletion" data-i18n="Delete Account">Delete Account</button>
+          </div>
+        </div>
+
+        <div id="view-sec-verification" class="dashboard-view" style="margin: auto;">
+          <div class="view-card text-center">
+            <h3 data-i18n="Security Verification">Security Verification</h3>
+            <p data-i18n="Answer your security question">Answer your security question</p>
+            <p class="font-weight-bold mt-3" id="display-sec-question" data-i18n="What was the name of your first pet?">What was the name of your first pet?</p>
+            <form id="form-sec-verification" class="mt-3" novalidate>
+              <div class="form-group text-left">
+                <label for="verify-sec-answer" data-i18n="Answer">Answer</label>
+                <input type="text" id="verify-sec-answer" autocomplete="off" required>
+                <span class="error-msg" id="err-verify-answer"></span>
+              </div>
+              <button type="submit" class="btn-primary mt-3" data-i18n="Verify">Verify</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="view-set-new-pwd" class="dashboard-view" style="margin: auto;">
+          <div class="view-card text-center">
+            <h3 data-i18n="Set New Master Password">Set New Master Password</h3>
+            <form id="form-set-new-pwd" novalidate>
+              <div class="form-group text-left">
+                <label for="new-master-pwd" data-i18n="New master password">New master password</label>
+                <div class="password-field">
+                  <input type="password" id="new-master-pwd" autocomplete="new-password" required>
+                  <button type="button" class="password-toggle" data-target="new-master-pwd" aria-controls="new-master-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+                </div>
+                <ul class="password-checklist" id="new-pwd-checklist">
+                  <li id="new-req-length" data-i18n="At least 12 characters">At least 12 characters</li>
+                  <li id="new-req-lower" data-i18n="One lowercase letter">One lowercase letter</li>
+                  <li id="new-req-upper" data-i18n="One uppercase letter">One uppercase letter</li>
+                  <li id="new-req-number" data-i18n="One number">One number</li>
+                  <li id="new-req-special" data-i18n="One special character">One special character</li>
+                </ul>
+                <span class="error-msg"></span>
+              </div>
+              
+              <div class="form-group text-left">
+                <label for="confirm-new-pwd" data-i18n="Confirm new master password">Confirm new master password</label>
+                <div class="password-field">
+                  <input type="password" id="confirm-new-pwd" autocomplete="new-password" required>
+                  <button type="button" class="password-toggle" data-target="confirm-new-pwd" aria-controls="confirm-new-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+                </div>
+                <span class="error-msg" id="err-confirm-new-pwd"></span>
+              </div>
+
+              <span class="error-msg text-center" id="err-new-pwd"></span>
+              <button type="submit" class="btn-primary mt-3" disabled data-i18n="Update password">Update password</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="view-pwd-updated" class="dashboard-view" style="margin: auto;">
+          <div class="view-card text-center">
+            <div class="icon-placeholder">✓</div>
+            <p class="mt-3" data-i18n="Your master password has been changed.">Your master password has been changed.</p>
+            <button type="button" class="btn-primary mt-3" id="btn-login-again" data-i18n="Log in again">Log in again</button>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- MODALS & OVERLAYS -->
+  <!-- ============================================== -->
+
+  <!-- Delete Account Modal -->
+  <div id="modal-delete-account" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-content text-center">
+      <h3 class="mt-3 text-danger" data-i18n="Confirm Account Deletion">Confirm Account Deletion</h3>
+      <p class="text-muted mt-2 text-left" style="font-size: 14px;" data-i18n="This action will schedule your account, vault settings, folders, and all credentials for permanent deletion. You will have 3 days to cancel this request by logging back in.">
+        This action will schedule your account, vault settings, folders, and all credentials for permanent deletion. You will have 3 days to cancel this request by logging back in.
+      </p>
+      <form id="form-delete-account" class="mt-3" novalidate>
+        <div class="form-group text-left">
+          <label for="delete-master-pwd" data-i18n="Master password">Master password</label>
+          <div class="password-field">
+            <input type="password" id="delete-master-pwd" autocomplete="current-password" required>
+            <button type="button" class="password-toggle" data-target="delete-master-pwd" aria-controls="delete-master-pwd" aria-pressed="false" data-i18n="Show">Show</button>
+          </div>
+        </div>
+        <div class="form-group text-left mt-2">
+          <label for="delete-confirmation-text"><span data-i18n="Type ">Type </span><strong>DELETE</strong><span data-i18n=" to confirm"> to confirm</span></label>
+          <input type="text" id="delete-confirmation-text" autocomplete="off" required>
+          <span class="error-msg" id="err-delete-account"></span>
+        </div>
+        <div class="flex-end gap-10 mt-3">
+          <button type="button" class="btn-secondary btn-auto" id="btn-cancel-delete-modal" data-i18n="Cancel">Cancel</button>
+          <button type="submit" class="btn-danger btn-auto" id="btn-submit-delete-account" disabled data-i18n="Schedule Account Deletion">Schedule Account Deletion</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Duplicate Credential Warning Modal -->
+  <div id="modal-duplicate-warning" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-content text-center">
+      <div class="icon-placeholder" style="border-color: #f0ad4e; color: #f0ad4e;">⚠️</div>
+      <h3 class="mt-3" data-i18n="Possible Duplicate Credential">Possible Duplicate Credential</h3>
+      <p class="text-muted mt-2 text-left" id="duplicate-warning-text" style="font-size: 14px;" data-i18n="A credential for this platform and username already exists.">
+        A credential for this platform and username already exists.
+      </p>
+      <p class="text-muted mt-2 text-left" style="font-size: 14px;" data-i18n="Do you want to save another credential anyway?">
+        Do you want to save another credential anyway?
+      </p>
+      <div class="flex-center gap-10 mt-3">
+        <button type="button" class="btn-secondary btn-auto" id="btn-duplicate-go-back" data-i18n="Go Back">Go Back</button>
+        <button type="button" class="btn-primary btn-auto" id="btn-duplicate-save-anyway" data-i18n="Save Anyway">Save Anyway</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Folder Modal -->
+  <div id="modal-core2-create-folder" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-content text-center">
+      <h3 class="mt-3" data-i18n="Create Folder">Create Folder</h3>
+      <form id="form-create-folder" class="mt-3" novalidate>
+        <div class="form-group text-left">
+          <label for="input-folder-name" data-i18n="Folder Name">Folder Name</label>
+          <input type="text" id="input-folder-name" required data-i18n-placeholder="e.g. Work Accounts">
+          <span class="error-msg" id="err-folder-name"></span>
+        </div>
+        <div class="flex-end gap-10 mt-3">
+          <button type="button" class="btn-secondary btn-auto" id="btn-cancel-create-folder" data-i18n="Cancel">Cancel</button>
+          <button type="submit" class="btn-primary btn-auto" id="btn-save-folder" data-i18n="Create">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Add Inheritor Modal -->
+  <div id="modal-add-inheritor" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-content text-center">
+      <h3 class="mt-3" data-i18n="Add Inheritor">Add Inheritor</h3>
+      <p class="text-muted mt-2 text-left" style="font-size: 14px;" data-i18n="The inheritor will have VIEW ONLY access to your vault if they accept the invitation.">
+        The inheritor will have VIEW ONLY access to your vault if they accept the invitation.
+      </p>
+      <form id="form-add-inheritor" class="mt-3" novalidate>
+        <div class="form-group text-left">
+          <label for="input-inheritor-email" data-i18n="Inheritor Email">Inheritor Email</label>
+          <input type="email" id="input-inheritor-email" required data-i18n-placeholder="email@example.com">
+          <span class="error-msg" id="err-inheritor-email"></span>
+        </div>
+        <div class="flex-end gap-10 mt-3">
+          <button type="button" class="btn-secondary btn-auto" id="btn-cancel-add-inheritor" data-i18n="Cancel">Cancel</button>
+          <button type="submit" class="btn-primary btn-auto" id="btn-save-inheritor" data-i18n="Send Invitation">Send Invitation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Session Expired Modal -->
+  <div id="modal-session-expired" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-content text-center">
+      <div class="icon-placeholder">🕒</div>
+      <p class="mt-3 font-weight-bold" id="modal-session-title" data-i18n="You were logged out due to inactivity.">You were logged out due to inactivity.</p>
+      <button type="button" class="btn-primary mt-3" id="btn-modal-login-again" data-i18n="Log in again">Log in again</button>
+    </div>
+  </div>
+
+  <!-- Confirm Action Modal -->
+  <div id="modal-core2-confirm" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-content text-center">
+      <h3 class="mt-3" id="core2-confirm-title" data-i18n="Confirm action">Confirm action</h3>
+      <p class="text-muted" id="core2-confirm-message" data-i18n="Are you sure?">Are you sure?</p>
+      <div class="flex-center gap-10 mt-3">
+        <button type="button" class="btn-secondary btn-auto" id="core2-btn-confirm-cancel" data-i18n="Cancel">Cancel</button>
+        <button type="button" class="btn-danger btn-auto" id="core2-btn-confirm-action" data-i18n="Confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="modal-core2-success" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-content text-center">
+      <h3 class="mt-3" id="core2-success-title" data-i18n="Credential saved">Credential saved</h3>
+      <p class="text-muted" id="core2-success-message" data-i18n="Your credential has been saved.">Your credential has been saved.</p>
+      <div class="flex-column gap-10 mt-3">
+        <button type="button" class="btn-primary" id="core2-btn-success-view" data-i18n="View credential">View credential</button>
+        <button type="button" class="btn-secondary" id="core2-btn-success-back" data-i18n="← Back to My Credentials">← Back to My Credentials</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="app-toast" class="toast hidden" role="status">
+    <span id="app-toast-message">Done</span>
+  </div>
+
+  </div><!-- /#checkkey-app -->
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

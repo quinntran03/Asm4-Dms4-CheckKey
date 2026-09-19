@@ -1,0 +1,9 @@
+{
+  "name": "checkkey-backend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "firebase-admin": "^12.7.0"
+  }
+}
