@@ -866,6 +866,8 @@ function injectCheckKeyHeaderStyles() {
       #checkkey-app .checkkey-menu-button {
         display: inline-flex !important;
         flex: 0 0 auto !important;
+        position: relative !important;
+        z-index: 10002 !important;
         width: 42px !important;
         height: 42px !important;
         align-items: center !important;
@@ -876,6 +878,9 @@ function injectCheckKeyHeaderStyles() {
         background: #fff !important;
         color: #171827 !important;
         cursor: pointer !important;
+        pointer-events: auto !important;
+        touch-action: manipulation !important;
+        -webkit-tap-highlight-color: transparent !important;
       }
 
       #checkkey-app .checkkey-menu-button span,
@@ -911,7 +916,7 @@ function injectCheckKeyHeaderStyles() {
         right: 0 !important;
         width: 100% !important;
         max-width: none !important;
-        z-index: 9999 !important;
+        z-index: 10001 !important;
 
         display: none;
         flex-direction: column;
@@ -955,6 +960,8 @@ function injectCheckKeyHeaderStyles() {
       #checkkey-app .checkkey-mobile-nav-item {
         display: flex !important;
         align-items: center !important;
+        position: relative !important;
+        z-index: 10002 !important;
         width: 100% !important;
         min-height: 44px !important;
         padding: 12px 14px !important;
@@ -1175,6 +1182,8 @@ function setupOneCheckKeyHeader(header) {
   // Mobile hamburger.
   let menuButton = header.querySelector(':scope > .checkkey-menu-button');
   let mobileMenu = header.querySelector(':scope > .checkkey-mobile-menu');
+  let mobileNav = mobileMenu?.querySelector(':scope > .checkkey-mobile-nav') || null;
+  let mobileLogout = mobileMenu?.querySelector(':scope > .checkkey-mobile-logout') || null;
 
   if (!menuButton) {
     menuButton = document.createElement('button');
@@ -1196,12 +1205,12 @@ function setupOneCheckKeyHeader(header) {
     mobileLanding.textContent = 'Home';
     mobileMenu.appendChild(mobileLanding);
 
-    const mobileNav = document.createElement('div');
+    mobileNav = document.createElement('div');
     mobileNav.className = 'checkkey-mobile-nav';
     mobileNav.setAttribute('aria-label', 'Dashboard navigation');
     mobileMenu.appendChild(mobileNav);
 
-    const mobileLogout = document.createElement('button');
+    mobileLogout = document.createElement('button');
     mobileLogout.type = 'button';
     mobileLogout.className = 'checkkey-mobile-logout';
     mobileLogout.textContent = 'Log Out';
@@ -1228,61 +1237,139 @@ function setupOneCheckKeyHeader(header) {
     mobileMenu.appendChild(mobileLang);
     header.appendChild(mobileMenu);
 
-    menuButton.addEventListener('click', event => {
-      event.preventDefault();
-      event.stopPropagation();
+  }
+
+  // IMPORTANT: the mobile menu already exists in the header HTML on some
+  // screens. Therefore event binding MUST NOT live inside `if (!mobileMenu)`.
+  // The old implementation did exactly that, which meant the hamburger was
+  // visible but had no click handler whenever the menu markup already existed.
+  if (!menuButton.dataset.checkkeyMobileMenuBound) {
+    menuButton.dataset.checkkeyMobileMenuBound = 'true';
+
+    const getMobileViewId = navId => {
+      const routes = {
+        'nav-dashboard': 'view-dashboard',
+        'nav-credentials': 'view-core2-list',
+        'nav-folders-link': 'view-folders',
+        'nav-search': 'view-core3-search',
+        'nav-inheritance': 'view-emergency-access',
+        'nav-security': 'view-change-pwd',
+        'nav-devices': 'view-devices-access',
+        'nav-analytics': 'view-analytics'
+      };
+      return routes[navId] || null;
+    };
+
+    const closeMobileMenu = () => {
+      mobileMenu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    };
+
+    const rebuildMobileNav = () => {
+      if (!mobileNav) return;
 
       const dashboardScreen = header.closest('#screen-dashboard');
       const sidebarNav = dashboardScreen?.querySelector('.sidebar nav ul');
       mobileNav.innerHTML = '';
 
-      if (sidebarNav) {
-        sidebarNav.querySelectorAll('.nav-item').forEach(original => {
-          const item = document.createElement('button');
-          item.type = 'button';
-          item.className = `checkkey-mobile-nav-item${original.classList.contains('active') ? ' active' : ''}`;
-          item.textContent = original.textContent.trim();
-          item.dataset.targetNavId = original.id || '';
-          mobileNav.appendChild(item);
-        });
-        mobileNav.style.display = '';
-        if (mobileLogout) mobileLogout.style.display = '';
-      } else {
+      if (!sidebarNav) {
         mobileNav.style.display = 'none';
         if (mobileLogout) mobileLogout.style.display = 'none';
+        return;
       }
 
-      const open = mobileMenu.classList.toggle('open');
+      sidebarNav.querySelectorAll('.nav-item').forEach(original => {
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.className = `checkkey-mobile-nav-item${original.classList.contains('active') ? ' active' : ''}`;
+        item.textContent = original.textContent.trim();
+        item.dataset.targetNavId = original.id || '';
+        item.setAttribute('aria-label', original.textContent.trim());
+        item.style.pointerEvents = 'auto';
+        item.style.touchAction = 'manipulation';
+        mobileNav.appendChild(item);
+      });
+
+      mobileNav.style.display = '';
+      if (mobileLogout) mobileLogout.style.display = '';
+    };
+
+    let lastTouchToggleAt = 0;
+
+    const toggleMobileMenu = event => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      rebuildMobileNav();
+
+      const open = !mobileMenu.classList.contains('open');
+      mobileMenu.classList.toggle('open', open);
       menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    // Touch/pointer first, click as the fallback. This prevents the mobile
+    // browser from swallowing the interaction and also avoids double-toggle.
+    menuButton.addEventListener('pointerup', event => {
+      if (event.pointerType === 'touch' || event.pointerType === 'pen') {
+        lastTouchToggleAt = Date.now();
+        toggleMobileMenu(event);
+      }
+    }, { passive: false });
+
+    menuButton.addEventListener('click', event => {
+      if (Date.now() - lastTouchToggleAt < 500) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+      toggleMobileMenu(event);
     });
 
     mobileMenu.addEventListener('click', event => {
-      const landing = event.target.closest('.btn-back-to-landing');
+      const target = event.target instanceof Element
+        ? event.target
+        : event.target?.parentElement;
+      if (!target) return;
+
+      const landing = target.closest('.btn-back-to-landing');
       if (landing) {
-        mobileMenu.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
+        event.preventDefault();
+        event.stopPropagation();
+        if (typeof showLandingPage === 'function') showLandingPage();
+        closeMobileMenu();
         return;
       }
 
-      const navItem = event.target.closest('.checkkey-mobile-nav-item');
+      const navItem = target.closest('.checkkey-mobile-nav-item');
       if (navItem) {
+        event.preventDefault();
+        event.stopPropagation();
+
         const targetId = navItem.dataset.targetNavId;
-        const original = targetId ? document.getElementById(targetId) : null;
-        if (original) original.click();
-        mobileMenu.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
+        const viewId = getMobileViewId(targetId);
+
+        if (viewId && typeof showDashboardView === 'function') {
+          showDashboardView(viewId);
+        } else {
+          const original = targetId ? document.getElementById(targetId) : null;
+          if (original) original.click();
+        }
+
+        closeMobileMenu();
         return;
       }
 
-      const logout = event.target.closest('.checkkey-mobile-logout');
+      const logout = target.closest('.checkkey-mobile-logout');
       if (logout && header.closest('#screen-dashboard')) {
+        event.preventDefault();
+        event.stopPropagation();
         const originalLogout = document.getElementById('btn-logout');
         if (originalLogout) originalLogout.click();
-        mobileMenu.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
+        closeMobileMenu();
       }
     });
   }
+
 
   const updateHeaderLanguage = () => {
     const lang = getStoredLanguage();
@@ -1320,7 +1407,26 @@ function ensureRecoveryPinHeaders() {
     const screen = document.getElementById(screenId);
     if (!screen) return;
 
-    let header = screen.querySelector(':scope > header.checkkey-header');
+    // Recovery screens must have exactly ONE direct header.
+    // Remove any duplicate header left by earlier initialization/render passes.
+    const directHeaders = Array.from(screen.children).filter(
+      element => element.tagName === 'HEADER'
+    );
+
+    let header =
+      directHeaders.find(element => element.classList.contains('checkkey-header')) ||
+      directHeaders[0] ||
+      null;
+
+    directHeaders.forEach(element => {
+      if (element !== header) element.remove();
+    });
+
+    if (header) {
+      header.classList.add('checkkey-header');
+      header.classList.add('app-header');
+      header.setAttribute('role', 'banner');
+    }
 
     if (!header) {
       const authWrapper = screen.querySelector(':scope > .auth-wrapper');
@@ -1451,7 +1557,10 @@ function bindRecoveryHeaderActions(header) {
   const menuButton = header.querySelector('.checkkey-menu-button');
   const mobileMenu = header.querySelector('.checkkey-mobile-menu');
 
-  if (menuButton && mobileMenu) {
+  // App headers already have their hamburger handler bound by
+  // setupOneCheckKeyHeader(). Do not bind a second click handler here,
+  // or one click will toggle the menu twice (open -> closed).
+  if (menuButton && mobileMenu && header.dataset.checkkeyHeaderReady !== 'true') {
     menuButton.addEventListener('click', event => {
       event.preventDefault();
       event.stopPropagation();
